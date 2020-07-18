@@ -5,32 +5,6 @@ import GalleryList from '../GalleryList/GalleryList';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
 class App extends Component {
-  state = {
-    galleryItems: [{
-      id: '',
-      path:'',
-      description: '',
-      likes:'',
-
-    }],
-  };
-  componentDidMount() {
-    this.getGallery();
-  }
-
-  getGallery() {
-    Axios({
-      method: 'GET',
-      url: '/gallery',
-    }).then((response) => {
-      this.setState({});
-    });
-  }
-  .catch((err) => {
-    console.log('Error in GET:', err);
-    alert('Error with GET server');
-  });
-
   render() {
     return (
       <div className="App">
@@ -38,10 +12,12 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <p><GalleryList/></p>
+        <p>
+          <GalleryList />
+        </p>
         <img src="images/goat_small.jpg" />
       </div>
-    )
+    );
   }
 }
 
