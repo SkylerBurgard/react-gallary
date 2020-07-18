@@ -2,7 +2,7 @@ const galleryItems = [
   {
     id: 0,
     path: 'images/goat_small.jpg',
-    description: 'A goat -- is it screaming?',
+    description: 'A photo of Michael Jordan',
     likes: 0,
   },
   {
