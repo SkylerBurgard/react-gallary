@@ -7,9 +7,13 @@ class GalleryItem extends Component {
     likes: [],
   };
   render() {
+    console.log(this.props);
     return (
       <div>
-        <p>hey</p>
+
+         <img key={this.props.key} src={this.props.path} alt={this.props.desc}
+          {this.props.likes}/>
+        
       </div>
     );
   }
