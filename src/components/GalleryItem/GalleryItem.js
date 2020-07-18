@@ -10,10 +10,7 @@ class GalleryItem extends Component {
     console.log(this.props);
     return (
       <div>
-
-         <img key={this.props.key} src={this.props.path} alt={this.props.desc}
-          {this.props.likes}/>
-        
+        <img src={this.props.path} alt={this.props.desc} />
       </div>
     );
   }

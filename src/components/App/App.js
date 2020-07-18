@@ -5,6 +5,16 @@ import GalleryList from '../GalleryList/GalleryList';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
 class App extends Component {
+  state = {
+    galleryItems: [
+      {
+        id: 0,
+        path: '',
+        description: '',
+        likes: 0,
+      },
+    ],
+  };
   render() {
     return (
       <div className="App">
