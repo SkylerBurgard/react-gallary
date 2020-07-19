@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
-import { render } from 'react-dom';
 import axios from 'axios';
 
 class GalleryList extends Component {

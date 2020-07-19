@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
-import Axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
+import Axios from 'axios';
 
 class App extends Component {
   state = {
-    galleryItems: [
-      {
-        id: 0,
-        path: '',
-        description: '',
-        likes: 0,
-      },
-    ],
+    galleryList: [],
   };
+
+  compoenentDidMount() {
+    this.getGalleryList();
+  }
+  getGalleryList() {
+    Axios.get('/gallery').then((response) => {
+      this.setState({
+        galleryList: response.data,
+      })
+    })
+  }
+  
+  }
   render() {
     return (
       <div className="App">
@@ -22,10 +27,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <p>
-          <GalleryList />
-        </p>
-        <img src="images/goat_small.jpg" />
+        <GalleryList />
       </div>
     );
   }

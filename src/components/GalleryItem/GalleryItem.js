@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+
+let clickCount = 0;
 
 class GalleryItem extends Component {
   state = {
     click: false,
     likes: [],
   };
+
+  displayLikes() {
+    clickCounter += 1;
+  }
   render() {
     console.log(this.props);
     return (
