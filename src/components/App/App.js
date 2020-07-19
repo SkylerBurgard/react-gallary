@@ -29,6 +29,7 @@ class App extends Component {
   }
 
   likeCount(event) {
+    console.log(event);
     axios({
       method: 'PUT',
       url: `/gallery/like/:${event.target.id}`,
