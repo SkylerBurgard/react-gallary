@@ -1,9 +1,9 @@
-# Project Name
+# Gallery Master application
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+## This app allows users to browse a gallery of photos uploaded by myself, like a social media application. Users can click an image to see the description of each photo and can also like photos that they find appealing the most.
 
-## Description
+### Duration to complete: 3 days
 
-Your project description goes here. What problem did you solve? How did you solve it?
+# Technologies used:
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+#### HTML/CSS, JavaScript, node, express, postgresQL, react
