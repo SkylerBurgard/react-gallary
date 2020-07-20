@@ -32,7 +32,7 @@ class App extends Component {
     console.log(event);
     axios({
       method: 'PUT',
-      url: `/gallery/like/:${event.target.id}`,
+      url: `/gallery/like/${event.target.id}`,
     }).then((response) => {
       this.getGalleryData();
     });

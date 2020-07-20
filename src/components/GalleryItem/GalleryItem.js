@@ -34,7 +34,7 @@ class GalleryItem extends Component {
   render() {
     console.log(this.props);
     return (
-      <div>
+      <div key={this.props.id}>
         <div onClick={this.toggleImg}>
           {this.state.hide ? (
             <img src={this.props.path} alt={this.props.desc} />
@@ -44,7 +44,8 @@ class GalleryItem extends Component {
         </div>
         <div>
           <p>{this.props.likes} people like this</p>
-          <button onClick={this.props.likeCount} id={this.props.key} />
+
+          <button onClick={this.props.likeCount} id={this.props.id} />
         </div>
       </div>
     );
