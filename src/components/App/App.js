@@ -28,7 +28,7 @@ class App extends Component {
       });
   }
 
-  likeCount(event) {
+  likeCount = (event) => {
     console.log(event);
     axios({
       method: 'PUT',
@@ -36,7 +36,7 @@ class App extends Component {
     }).then((response) => {
       this.getGalleryData();
     });
-  }
+  };
 
   render() {
     return (
